@@ -11,5 +11,6 @@ window.onload = function () {
             // data = json.items;
             let data = JSON.parse(JSON.stringify(json.lists));
             listEl.textContent = JSON.stringify(data);
+            // listEl.innerHTML = "<div>";
         });
 };
