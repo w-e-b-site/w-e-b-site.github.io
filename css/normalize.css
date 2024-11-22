@@ -1,0 +1,31 @@
+@font-face {
+	font-family: 'Gowun Batang';
+	font-style: normal;
+	font-weight: 400;   /* 400, 700 */
+	src: url(/font/GowunBatang-Regular.ttf);
+	unicode-range: U+AC00-D7A3;
+    /* unicode-range: U+f9ca-fa0b, U+ff03-ff05, U+ff07, U+ff0a-ff0b, U+ff0d-ff19, U+ff1b, U+ff1d, U+ff20-ff5b, U+ff5d, U+ffe0-ffe3, U+ffe5-ffe6; */
+}
+
+@font-face {
+	font-family: 'LXGW WenKai Mono TC';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/font/LXGWWenKaiMonoTC-Regular.ttf);
+	unicode-range: U+4E00-9FAF;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	src: url(/font/Poppins-Regular.ttf);
+	unicode-range: U+0020-007E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, "LXGW WenKai Mono TC", "Gowun Batang";
+}
