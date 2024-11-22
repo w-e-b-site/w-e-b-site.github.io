@@ -27,7 +27,7 @@
                 display: none;
                 color: #fff;
                 font-size: 20px;
-                padding: 10px;
+                padding: 10px 30px;
                 border: 1px solid #fff;
                 border-radius: 10px;
                 box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
@@ -156,7 +156,7 @@
                 descriptEl.classList.remove("showme1");
             }
             function liClick(item) {
-                alert("준비 중입니다. " + readBookListTemp[item - 1].book);
+                location.href = `book.html?${item}`;
             }
             // (function () { })();
             window.onload = function () {
@@ -178,7 +178,10 @@
                                 item.id +
                                 "</span>" +
                                 item.book +
-                                "</li>";
+                                "(" +
+                                item.hanja +
+                                ")";
+                            ("</li>");
                         });
                         bookListEl.innerHTML = texttemp;
                     });

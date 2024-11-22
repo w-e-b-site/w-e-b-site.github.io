@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const receiveData = location.href.split("?")[1];
+            alert(receiveData);
+            // 받는 데이터가 한글인 경우
+            // console.log(decodeURI(receiveData));
+        </script>
+    </body>
+</html>
