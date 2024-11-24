@@ -6,127 +6,10 @@
         <title>불(부처님).닷컴</title>
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-        <style>
-            .container {
-                width: 100%;
-                height: 100vh;
-
-                min-width: 1000px;
-                min-height: 500px;
-            }
-            .nav {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                width: 100%;
-                height: 15%;
-                background-color: #91b9db;
-            }
-            .descript {
-                display: none;
-                color: #fff;
-                font-size: 20px;
-                padding: 10px 30px;
-                border: 1px solid #fff;
-                border-radius: 10px;
-                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            }
-            .content {
-                position: relative;
-                width: 100%;
-                height: 70%;
-                background-image: url(/image/bul-bg-01.png);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-color: #91b9db;
-            }
-            .books {
-                position: absolute;
-                top: 20%;
-                left: 60%;
-
-                width: 320px;
-                border-bottom-left-radius: 10px;
-                border-bottom-right-radius: 10px;
-                border-bottom: 20px solid #03a9f4;
-                /* border: solid 1px black; */
-            }
-            .books h2 {
-                color: #fff;
-                background: #03a9f4;
-                padding: 10px 20px;
-                font-size: 20px;
-                font-weight: 700px;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-            }
-            .books ul {
-                position: relative;
-                background: #fff;
-            }
-            .books ul li {
-                width: 100%;
-                list-style: none;
-                padding: 10px;
-                background: #fff;
-                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-                cursor: pointer;
-            }
-
-            .books ul:hover li {
-                opacity: 0.6;
-            }
-            .books ul li:hover {
-                transform: scale(1.1);
-                z-index: 100;
-                background: #35bcff;
-                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-                color: #fff;
-                opacity: 1;
-            }
-            .books ul li span {
-                width: 20px;
-                height: 20px;
-                text-align: center;
-                line-height: 20px;
-                background: #25bcff;
-                color: #fff;
-                display: inline-block;
-                border-radius: 50%;
-                margin-right: 10px;
-                font-size: 12px;
-                font-weight: 600px;
-            }
-
-            .books ul li:hover span {
-                background: #fff;
-                color: #25bcff;
-            }
-
-            .footer {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 15%;
-                background-color: #fff;
-            }
-            .coypright {
-                font-size: 14px;
-            }
-
-            .showme1 {
-                display: none;
-            }
-            .showme1 {
-                display: block;
-            }
-        </style>
+        <link rel="stylesheet" href="/css/index.css" />
+        <script src="/script/index.js" defer></script>
     </head>
     <body>
-        <!-- https://w-e-b-site.github.com/ -->
-        <!-- XN--WR3B.XN--MK1BU44C -->
         <div class="container">
             <div class="nav">
                 <div class="descript">우리는 민족 중흥의 역사를</div>
@@ -140,54 +23,10 @@
             <div class="footer">
                 <div class="coypright">
                     ⓒ All rights belong to Buddha. 나무아미타불
+                    <img src="/image/hand16.png" alt="서원" />
                 </div>
             </div>
         </div>
-        <script>
-            let readBookListTemp;
-            const bookListEl = document.querySelector(".bookList");
-            const descriptEl = document.querySelector(".descript");
-
-            function liOver(item) {
-                descriptEl.classList.add("showme1");
-                descriptEl.classList.remove("showme2");
-                descriptEl.innerHTML = readBookListTemp[item - 1].desc;
-            }
-            function liOut(item) {
-                descriptEl.classList.add("showme2");
-                descriptEl.classList.remove("showme1");
-            }
-            function liClick(item) {
-                location.href = `book.html?${readBookListTemp[item - 1].book}`;
-            }
-            // (function () { })();
-            window.onload = function () {
-                let texttemp = "";
-                fetch("/json/booklist.json")
-                    .then((response) => response.json())
-                    .then((json) => {
-                        const readBookList = json.booklist;
-                        readBookListTemp = readBookList;
-                        readBookList.forEach((item, i) => {
-                            texttemp +=
-                                "<li onclick=liClick(" +
-                                item.id +
-                                ") onmouseover=liOver(" +
-                                item.id +
-                                ") onmouseout=liOut(" +
-                                item.id +
-                                ")><span>" +
-                                item.id +
-                                "</span>" +
-                                item.book +
-                                "(" +
-                                item.hanja +
-                                ")";
-                            ("</li>");
-                        });
-                        bookListEl.innerHTML = texttemp;
-                    });
-            };
-        </script>
+        <script></script>
     </body>
 </html>
