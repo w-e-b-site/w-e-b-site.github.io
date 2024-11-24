@@ -158,7 +158,7 @@
                 descriptEl.classList.remove("showme1");
             }
             function liClick(item) {
-                location.href = `book.html?${item}`;
+                location.href = `book.html?${readBookListTemp[item - 1].book}`;
             }
             // (function () { })();
             window.onload = function () {
