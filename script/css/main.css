@@ -11,7 +11,7 @@ header {
 
     width: 100%;
     height: 15%;
-    background-color: #91b9db;
+    background-color: var(--color-bg);
 }
 header .descript {
     display: none;
@@ -42,17 +42,17 @@ footer {
 }
 .content .books {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 60%;
 
     width: 320px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-bottom: 20px solid #03a9f4;
+    border-bottom: 20px solid var(--color-ul);
 }
 .content .books h2 {
     color: #fff;
-    background: #03a9f4;
+    background: var(--color-ul);
     padding: 10px 20px;
     font-size: 20px;
     font-weight: 700px;
@@ -93,7 +93,7 @@ footer {
 .books ul li:hover {
     transform: scale(1.1);
     z-index: 100;
-    background-color: #35bcff;
+    background-color: var(--color-ul-hover);
     border-radius: 10px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     color: #fff;

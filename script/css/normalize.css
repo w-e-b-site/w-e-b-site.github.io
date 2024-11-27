@@ -29,3 +29,9 @@
     box-sizing: border-box;
     font-family: Poppins, "LXGW WenKai Mono TC", "Gowun Batang";
 }
+
+:root {
+	--color-bg: #91b9db;
+	--color-ul: #03a9f4;
+	--color-ul-hover: #35bcff;
+}
