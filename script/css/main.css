@@ -1,11 +1,10 @@
 .container {
     width: 100%;
     height: 100vh;
-
     min-width: 1000px;
     min-height: 500px;
 }
-.nav {
+header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +13,7 @@
     height: 15%;
     background-color: #91b9db;
 }
-.descript {
+header .descript {
     display: none;
     color: #fff;
     font-size: 20px;
@@ -23,16 +22,25 @@
     border-radius: 10px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 15%;
+    background-color: #fff;
+}
 .content {
-    position: relative;
     width: 100%;
     height: 70%;
-    background-image: url(/image/bul-bg-01.png);
+
+    background-image: url(/script/data/image/bul-bg-01.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #91b9db;
 }
-.books {
+.content .books {
     position: absolute;
     top: 20%;
     left: 60%;
@@ -41,9 +49,8 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom: 20px solid #03a9f4;
-    /* border: solid 1px black; */
 }
-.books h2 {
+.content .books h2 {
     color: #fff;
     background: #03a9f4;
     padding: 10px 20px;
@@ -52,7 +59,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.books ul {
+.content .books ul {
     position: relative;
     background: #fff;
 }
@@ -64,19 +71,10 @@
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-
-.books ul:hover li {
-    opacity: 0.6;
+.books ul p {
+    display: none;
 }
-.books ul li:hover {
-    transform: scale(1.1);
-    z-index: 100;
-    background: #35bcff;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-    color: #fff;
-    opacity: 1;
-}
-.books ul li span {
+.books ul span {
     width: 20px;
     height: 20px;
     text-align: center;
@@ -89,27 +87,19 @@
     font-size: 12px;
     font-weight: 600px;
 }
-
+.books ul:hover li {
+    opacity: 0.6;
+}
+.books ul li:hover {
+    transform: scale(1.1);
+    z-index: 100;
+    background-color: #35bcff;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    opacity: 1;
+}
 .books ul li:hover span {
     background: #fff;
     color: #25bcff;
-}
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 15%;
-    background-color: #fff;
-}
-.coypright {
-    font-size: 14px;
-}
-
-.showme1 {
-    display: none;
-}
-.showme1 {
-    display: block;
 }
